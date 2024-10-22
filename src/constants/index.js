@@ -22,11 +22,8 @@ import {
     blog,
     cdao,
     shouse,
-    carrent,
     gurukuln,
-    jobit,
     chess,
-    tripguide,
     threejs,
   } from "../assets";
   

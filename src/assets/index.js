@@ -29,11 +29,8 @@ import shouse from "./shouse.png";
 import chess from "./chess.png";
 import music from "./music.png";
 import gurukuln from "./gurukul.png";
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
 import todo from "./todo.png";
 import blog from "./blog.png";
-import tripguide from "./tripguide.png";
 
 export {
   logo,
@@ -64,9 +61,6 @@ export {
   cdao,
   gurukul,
   grappltech,
-  carrent,
-  jobit,
   shouse,
   blog,
-  tripguide,
 };
