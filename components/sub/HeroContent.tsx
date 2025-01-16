@@ -95,7 +95,7 @@ const HeroContent = () => {
         <motion.div
         variants={slideInFromLeft(0.5)}
         className="flex gap-5 justify-center lg:justify-start">
-        <Link href="#" onClick={(e) => scrollToSection(e, "about-me")}>About me
+        <Link href="#" onClick={(e) => scrollToSection(e, "about-me")}>
         <HoverBorderGradient
             containerClassName="rounded-full"
             as="button"
