@@ -89,7 +89,7 @@ const ModelViewer: React.FC<ModelViewerProps> = ({ modelPath }) => {
       requestAnimationFrame(animate)
 
       // Update animation mixer
-      const animationSpeed = 0.005
+      const animationSpeed = 0.01
       if (mixerRef.current) {
         mixerRef.current.update(animationSpeed)
       }
