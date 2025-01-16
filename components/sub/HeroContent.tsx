@@ -6,8 +6,7 @@ import { motion } from "framer-motion";
 import { slideInFromLeft, slideInFromRight } from "@/utils/motion";
 import { FlipWords } from "../ui/flip-words";
 import { FaPlay, FaPause } from "react-icons/fa"; 
-
-import Image from "next/image";
+import Link from "next/link";
 import { HoverBorderGradient } from "../ui/hover-border-gradient";
 import ModelViewer from '../ui/stormtrooper'
 
@@ -96,6 +95,7 @@ const HeroContent = () => {
         <motion.div
         variants={slideInFromLeft(0.5)}
         className="flex gap-5 justify-center lg:justify-start">
+        <Link href="#" onClick={(e) => scrollToSection(e, "about-me")}>About me
         <HoverBorderGradient
             containerClassName="rounded-full"
             as="button"
@@ -103,6 +103,7 @@ const HeroContent = () => {
           >
           <span>Know More</span>
         </HoverBorderGradient>
+        </Link>
 
         <div className="flex justify-center items-center ml-5">
           {/* Audio element with muted initially */}
@@ -131,5 +132,16 @@ const HeroContent = () => {
     </motion.div>
   );
 };
+
+const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, targetId: string) => {
+    e.preventDefault(); // Prevent default link behavior
+    const section = document.getElementById(targetId);
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start", // Align to the top of the section
+      });
+    }
+  };
 
 export default HeroContent;
